@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ <copyright>
+ </copyright>
+
+ $Id$
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.emf.ecore.generated_package">
+      <package
+            uri="http://xml/1.0"
+            class="xml.XmlPackage"
+            genModel="model/xml.genmodel"/>
+   </extension>
+   <extension
+         point="org.eclipse.graphiti.ui.diagramTypes">
+      <diagramType
+            id="axamal.DiagramType"
+            name="XML Diagram"
+            type="axamal">
+      </diagramType>
+   </extension>
+   <extension
+         point="org.eclipse.graphiti.ui.diagramTypeProviders">
+      <diagramTypeProvider
+            class="axamalmetamodel.DiagramTypeProvider1"
+            id="axamal.DiagramTypeProvider"
+            name="XML Diagram Editor">
+         <diagramType
+               id="axamal.DiagramType">
+         </diagramType>
+      </diagramTypeProvider>
+   </extension>
+
+</plugin>
